@@ -9,6 +9,7 @@ Project management WBS is shown in the Gantt Chart below:
 ![image](https://user-images.githubusercontent.com/94745847/209503930-20a7a2ad-0ed3-4736-8c73-0a307f20f7b1.png)
 ![image](https://user-images.githubusercontent.com/94745847/209503968-fc561afa-f2d9-4598-9aed-5b5f652a36d0.png)
 
+The system WBS for the Facial Recognition system are represented as follows. This WBS is designed to divide the technical portion of the project into a number of modules, including user interfaces, API management, Facial Detection, and Facial Recognition:
 ![image](https://user-images.githubusercontent.com/94745847/209530404-bee0a3cf-1124-4b82-af22-7d9db1bfc30c.png)
 
 
