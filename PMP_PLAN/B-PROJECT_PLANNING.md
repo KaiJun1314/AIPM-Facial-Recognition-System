@@ -9,6 +9,9 @@ Critical to the success of the project, the planning phase focuses on developing
 ![image](https://user-images.githubusercontent.com/94745847/209503930-20a7a2ad-0ed3-4736-8c73-0a307f20f7b1.png)
 ![image](https://user-images.githubusercontent.com/94745847/209503968-fc561afa-f2d9-4598-9aed-5b5f652a36d0.png)
 
+![image](https://user-images.githubusercontent.com/94745847/209530244-95b11dea-f149-436b-b123-42be2b95b3e7.png)
+
+
 
 ### Scope
 
