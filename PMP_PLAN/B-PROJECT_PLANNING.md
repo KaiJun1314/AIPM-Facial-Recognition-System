@@ -5,9 +5,9 @@
 
 Critical to the success of the project, the planning phase focuses on developing the road map. Typically, this phase begins with establishing project objectives. To establish objectives, project managers can utilise a variety of techniques. As part of the subsequent project kick-off meeting, collect project requirements, establish goals and scopes, create WBS, verify project scope, and manage project scope.
 
-Project Title: Facial Recognition System
-Project Manager: Wong Kai Jun
-Date: 12/12/2022
+#Project Title: Facial Recognition System
+#Project Manager: Wong Kai Jun
+#Date: 12/12/2022
 ![image](https://user-images.githubusercontent.com/94745847/209503930-20a7a2ad-0ed3-4736-8c73-0a307f20f7b1.png)
 ![image](https://user-images.githubusercontent.com/94745847/209503968-fc561afa-f2d9-4598-9aed-5b5f652a36d0.png)
 
