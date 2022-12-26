@@ -3,7 +3,7 @@
 
 ### Project Management Life cycle
 
-Critical to the success of the project, the planning phase focuses on developing the road map. Typically, this phase begins with establishing project objectives. To establish objectives, project managers can utilise a variety of techniques. As part of the subsequent project kick-off meeting, collect project requirements, establish goals and scopes, create WBS, verify project scope, and manage project scope.
+During the planning phase of the project, the Gantt Chart, which is vital to the project's success, is the primary emphasis. The Gantt Chart enables the team to adhere to the requirements and consistently reach the milestone. The work breakdown structure (WBS) of a project divides the tasks and responsibilities of each participant, such as the project manager, into distinct modules. According to the developed WBS, each member has different duties and responsibilities at each stage of the lifecycle.
 
 Project management WBS is shown in the Gantt Chart below:
 ![image](https://user-images.githubusercontent.com/94745847/209503930-20a7a2ad-0ed3-4736-8c73-0a307f20f7b1.png)
