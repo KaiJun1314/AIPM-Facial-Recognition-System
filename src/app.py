@@ -1,12 +1,13 @@
-from flask import Flask, render_template, request
+from flask import Flask, request
 import base64
 import cv2
 import numpy as np
 from deepface import DeepFace
 from deepface.basemodels import Facenet
-from datetime import datetime
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 def base64_to_cv2(image_base64):
     """base64 image to cv2"""
@@ -32,22 +33,17 @@ def detect_person(input_path):
     else:
         return "None"
 
-## API
 @app.route("/recognition", methods=['POST'])
 def recognition():
-    input_path = 'tmp.jpg'
-    input = base64_to_cv2(request.json["image"])
-    cv2.imwrite(input_path, input)
-    result = detect_person(input_path)
-    print(result)
-    return {
-        'response' : result
-    }
-
-## Webpage
-@app.route("/facial_recognition")
-def facial_recognition():
-    return render_template("interface.html")
+    if request.method == 'POST': 
+        input_path = 'tmp.jpg'
+        input = base64_to_cv2(request.json["image"])
+        cv2.imwrite(input_path, input)
+        result = detect_person(input_path)
+        print(result)
+        return {
+            'response' : result
+        }
 
 if __name__ == '__main__':
     app.run(debug=True)
