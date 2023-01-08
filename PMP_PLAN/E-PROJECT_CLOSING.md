@@ -6,6 +6,9 @@
 
 #### 1. Customer Acceptance Form
 
+![image](https://user-images.githubusercontent.com/121177884/211193361-b4e19b0e-945c-4ba8-8d9c-f254f4604c62.png)
+
+
 
 #### 2. Lessons Learned Document
 
@@ -14,7 +17,7 @@
 
 **1.0 PROJECT OBJECTIVES**
 
-The facial recognition system is done by Group B. it was intended to develop an artificial intelliegent system that have a ability to detect human faces. besides our other target we can recognize the charactewr of the human faces. that not the limitation when we also move forward in order to develop an application programming interface API for future use as the integration module.**
+The facial recognition system is done by Group B. it was intended to develop an artificial intelliegent system that have a ability to detect human faces. besides our other target we can recognize the character of the human faces. that not the limitation when we also move forward in order to develop an application programming interface API for future use as the integration module.**
 
 **2.0 SUMMARY OF PROJECT RESULTS**
 
