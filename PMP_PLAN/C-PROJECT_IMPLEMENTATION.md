@@ -6,14 +6,14 @@ Hardware Requirement:
 For the hardware, our group use the laptop come with Ryzen 7 processor  and 16GB of RAM to run our project. 
 
 #### Software Requirement:
-For the software, we use python programming language to implement the code for our intelligent module to recognize the number plate and HTML to design the website included with the databse to keep all the information neatly.
+For the software, we use python programming language to implement the code for our intelligent module to recognize the human face and HTML to design the website included with the databse to keep all the information neatly.
 
 #### Intelligent System Architecture:
-The proposed neural network used is Convolutional neural networks (CNNs): CNNs are a type of artificial neural network that are particularly well-suited for image processing tasks. They can be trained to recognize patterns in images and extract features that are relevant for a particular task. CNNs have been used successfully for a variety of image recognition tasks, including license plate recognition.
+The proposed neural network used is Convolutional neural networks (CNNs): CNNs are a type of artificial neural network that are particularly well-suited for image processing tasks. They can be trained to recognize patterns in images and extract features that are relevant for a particular task. CNNs have been used successfully for a variety of image recognition tasks, including facial recognition.
 
 
 #### Outcomes of the system
-The outcome of the system should be the ability to accurately recognize and extract the characters from images of license plates. The accuracy of the system will depend on a variety of factors, including the quality of the training data, the complexity of the CNN architecture, and the effectiveness of the training algorithm. With a well-designed system and sufficient training data, it is possible to achieve very high accuracy rates for license plate recognition using a CNN.
+The outcome of the system should be the ability to accurately recognize and extract the characters from images of faces. The accuracy of the system will depend on a variety of factors, including the quality of the training data, the complexity of the CNN architecture, and the effectiveness of the training algorithm. With a well-designed system and sufficient training data, it is possible to achieve very high accuracy rates for facial recognition using a CNN.
 
 
 
