@@ -25,6 +25,8 @@ After the system complete, we got accuracy around 50% from the system tested.
 
 **3.0 ORIGINAL AND ACTUAL SCHEDULE**
 
+![image](https://user-images.githubusercontent.com/121177884/211190647-b44c0b67-cd55-402a-8258-e92360909440.png)
+
 **4.0 ORIGINAL AND ACTUAL BUDGET**
 
 **5.0 PROJECT ASSESSMENT**
