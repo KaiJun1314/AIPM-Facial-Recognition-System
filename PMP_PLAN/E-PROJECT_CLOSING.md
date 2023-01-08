@@ -12,6 +12,9 @@
 
 #### 2. Lessons Learned Document
 
+![image](https://user-images.githubusercontent.com/121177884/211194866-ec238c66-fa46-4c8d-8b23-7c3c39f7c7dd.png)
+
+
 #### 3. Final Project Report
 **FACIAL RECOGNITION SYSTEM**
 
