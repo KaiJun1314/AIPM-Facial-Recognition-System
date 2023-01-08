@@ -32,6 +32,9 @@ After the system complete, we got accuracy around 50% from the system tested.
 
 **4.0 ORIGINAL AND ACTUAL BUDGET**
 
+![image](https://user-images.githubusercontent.com/121177884/211195140-cfd018ed-7e12-469b-81ac-beddb8f65d0b.png)
+
+
 **5.0 PROJECT ASSESSMENT**
 
 **5.1 SCOPE**
