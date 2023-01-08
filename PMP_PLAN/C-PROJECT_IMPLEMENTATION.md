@@ -2,18 +2,21 @@
 
 ## C. IMPLEMENTING THE PROJECT PLAN
 ### Deliverables:
-Hardware Requirement:
+#### Hardware Requirement:
+Laptop which consists of intel core i5 8th Gen and 12GB RAM is used to conduct the project.
 
 #### Software Requirement:
+Python programming language is used to implement the program for artificial intelligence module in human face detection and recognizing authorized person. Flask web framework which written in Python is used to design the api and website.
 
 #### Intelligent System Architecture:
-
+<img src="assets/resnet-ssd.webp" width="100%">
 
 #### Outcomes of the system
+2 main steps will be applied in this system, which is human face detection and recognition. Given an input image, the first steps are to detect the human face using 
 
+license plate using Warped Planar Object Detection Network (WPOOD-Net) and regresses one affine transformation per detection, allowing a rectification of the license plate area to a rectangle resembling a frontal view. These positive and rectified detections are fed to an OCR network for final character recognition. 
 
 ### Tasks and Estimated Costs
-
 | Task |  Estimated Costs | Notes |
 |-----|----|----|
 |   Server Maintenance         |$15000                         |  Monthly Cloud Server      |      

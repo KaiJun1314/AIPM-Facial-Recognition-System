@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>Facial Recognition System</title>
     <style>
@@ -92,7 +91,8 @@
 <p>Allow camera access request, and wait for few seconds</p>
 <hr />
 <div id="container">
-    <video autoplay playsinline id="videoElement"></video>
+    <img src="image.jpg" height="450px" >
+    <video autoplay playsinline id="videoElement" style="display: None;"></video>
     <br>
     <button class="button-17" role="button">Submit</button>
 </div>
@@ -100,49 +100,41 @@
 
 <script src="jquery-3.6.3.min.js"></script>
 <script>
-    $(function () {
-        const video = document.querySelector("#videoElement");
-        navigator.mediaDevices.getUserMedia({
-            audio: false,
-            video: {
-                facingMode: 'environment'
-            }
-        }).then(function (stream) {
-            video.srcObject = stream;
-            var height = stream.getVideoTracks()[0].getSettings().height;
-            var width = stream.getVideoTracks()[0].getSettings().width;
-            canvas.setAttribute("width", width);
-            canvas.setAttribute("height", height);
-            return new Promise(resolve => video.onloadedmetadata = resolve);
-        });
+    var canvas = document.createElement("canvas");
+    const video = document.querySelector("#videoElement");
+    navigator.mediaDevices.getUserMedia({
+        audio: false,
+        video: {
+            facingMode: 'environment'
+        }
+    }).then(function (stream) {
+        video.srcObject = stream;
+        var height = stream.getVideoTracks()[0].getSettings().height;
+        var width = stream.getVideoTracks()[0].getSettings().width;
+        canvas.setAttribute("width", width);
+        canvas.setAttribute("height", height);
+        return new Promise(resolve => video.onloadedmetadata = resolve);
+    });
 
-        $(".button-17").click(function () {
-            $(".button-17").attr("disabled", true);
-            var text = document.getElementById("result");
-            var canvas = document.createElement('canvas');
-            canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
-            let image_data_url = canvas.toDataURL('image/jpeg', 1);
-            text.innerHTML = "Detecting ...";
-            $.ajax({
-                type: "POST",
-                url: "http://localhost:5000/recognition",
-                data: JSON.stringify({
-                    "image": image_data_url,
-                }),
-                contentType: 'application/json;charset=UTF-8',
-                cache: false,
-                success: function (result) {
-                    var detected_person = result.response;
-                    if (detected_person == "None") {
-                        text.innerHTML = "No Authorized Person Detected";
-                    } else {
-                        text.innerHTML = "Welcome " + detected_person;
-                    }
-                    $(".button-17").attr("disabled", false);
-                },
-            });
+    $(".button-17").click(function () {
+        $(this).attr("disabled", true);
+        var text = $("#result");
+        canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+        let image_data_url = canvas.toDataURL('image/jpeg', 1);
+        text.text("Detecting ...");
+        $.ajax({
+            type: "POST",
+            url: "http://localhost:5000/recognition",
+            data: JSON.stringify({
+                "image": image_data_url,
+            }),
+            contentType: 'application/json;charset=UTF-8',
+            cache: false,
+            success: function (result) {
+                text.text(result);
+                $(this).attr("disabled", false);
+            },
         });
     });
 </script>
-
 </html>

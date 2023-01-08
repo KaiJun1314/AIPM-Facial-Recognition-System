@@ -21,17 +21,21 @@ def base64_to_cv2(image_base64):
 
 def detect_person(input_path):
     model = Facenet.loadModel()
-    df = DeepFace.find(img_path = input_path, db_path = "database", 
-		model_name="Facenet", model = model, distance_metric= 'cosine', detector_backend='ssd')
+    try:
+        df = DeepFace.find(img_path = "image.jpg", db_path = "database", 
+            model_name="Facenet", model = model, distance_metric= 'cosine', detector_backend='ssd')
+    except ValueError: 
+        return "Face could not be detected"
+
     df = df.sort_values(by=['Facenet_cosine'])
     if len(df) > 0: 
         if df.iloc[0].Facenet_cosine <= 0.5:
             name = df.iloc[0].identity.split('\\')[1].split('/')
-            return name[0]
+            return "Welcome " + name[0]
         else :
-            return "None"
+            return "No Authorized Personnel detected"
     else:
-        return "None"
+        return "No Authorized Personnel detected"
 
 @app.route("/recognition", methods=['POST'])
 def recognition():
@@ -39,11 +43,7 @@ def recognition():
         input_path = 'tmp.jpg'
         input = base64_to_cv2(request.json["image"])
         cv2.imwrite(input_path, input)
-        result = detect_person(input_path)
-        print(result)
-        return {
-            'response' : result
-        }
+        return detect_person(input_path)
 
 if __name__ == '__main__':
     app.run(debug=True)
