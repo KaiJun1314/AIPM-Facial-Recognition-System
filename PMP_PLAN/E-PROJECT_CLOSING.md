@@ -13,7 +13,7 @@
 **FACIAL RECOGNITION SYSTEM**
 
 **1.0 PROJECT OBJECTIVES**
-###The facial recognition system is done by Group B. it was intended to develop an artificial intelliegent system that have a ability to detect human faces. besides our other target we can recognize the charactewr of the human faces. that not the limitation when we also move forward in order to develop an application programming interface API for future use as the integration module.
+### The facial recognition system is done by Group B. it was intended to develop an artificial intelliegent system that have a ability to detect human faces. besides our other target we can recognize the charactewr of the human faces. that not the limitation when we also move forward in order to develop an application programming interface API for future use as the integration module.
 
 **2.0 SUMMARY OF PROJECT RESULTS**
 After the system complete, we got accuracy around 50% from the system tested. 
