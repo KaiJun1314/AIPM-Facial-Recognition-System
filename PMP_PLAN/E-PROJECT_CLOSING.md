@@ -49,5 +49,8 @@ Group B will provide support as needed for the facial recognition system project
 
 #### 4. Close Contract
 
+![image](https://user-images.githubusercontent.com/121177884/211194183-a8cb32c0-52ea-46ff-b913-82eb47361858.png)
+
+
 <br><br><br>
 ##### Next: [Project Presentation](F-PROJECT_PRESENTATION.md)
