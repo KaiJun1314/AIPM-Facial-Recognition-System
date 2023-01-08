@@ -32,6 +32,8 @@ The outcome of the system should be the ability to accurately recognize and extr
 ### Milestone Chart
 #### Microsoft Project:
 
+<img src="assets/implementation/ganttproject.pdf" width="100%">
+
 #### Power Point:
 
 <br><br>
