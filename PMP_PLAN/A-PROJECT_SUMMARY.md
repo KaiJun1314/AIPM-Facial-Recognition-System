@@ -2,8 +2,8 @@
 
 ## A. DEFINING THE PROJECT
 ###  Project Summary
-
-###  Customer: 
+In ABC Group
+###  Customer: ABC Group 
 
 ### Project Name: FACIAL RECOGNITION SYSTEM
 

@@ -14,7 +14,7 @@ Flask-Cors==3.0.10
 ```
 
 ### Project Result
-Result using Web API:
+Result using Web API:\
 <img src="assets/web_demo.png" width="100%">
 
 <br><br>

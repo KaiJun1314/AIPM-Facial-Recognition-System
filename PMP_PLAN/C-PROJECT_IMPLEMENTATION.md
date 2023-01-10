@@ -3,11 +3,9 @@
 ## C. IMPLEMENTING THE PROJECT PLAN
 ### Deliverables:
 #### Hardware Requirement:
-For the hardware, our group use the laptop come with Ryzen 7 processor  and 16GB of RAM to run our project. 
 Laptop which consists of intel core i5 8th Gen and 12GB RAM is used to conduct the project.
 
 #### Software Requirement:
-For the software, we use python programming language to implement the code for our intelligent module to recognize the human face and HTML to design the website included with the databse to keep all the information neatly.
 Python programming language is used to implement the program for artificial intelligence module in human face detection and recognizing authorized person. Flask web framework which written in Python is used to design the api and website.
 
 #### Intelligent System Architecture:
