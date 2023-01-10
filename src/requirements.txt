@@ -1,5 +1,8 @@
-deepface==0.0.75
 Flask==2.2.2
 numpy==1.24.0
 opencv-python==4.6.0.66
 Flask-Cors==3.0.10
+mtcnn==0.1.1
+keras_applications
+tensorflow
+keras_vggface
