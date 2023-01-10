@@ -5,7 +5,7 @@
 In ABC Group
 ###  Customer: ABC Group 
 
-### Project Name: FACIAL RECOGNITION SYSTEM
+### Project Name: Facial Recognition System
 
 ### Team Members: 
 + WONG KAI JUN B032010159

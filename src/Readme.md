@@ -28,6 +28,4 @@ $ python app.py
 2. Send your image data using POST Method to http://localhost:5000/recognition
 
 ## Add New Authorized Person
-1. Create folder with authorized person's name in database folder 
-2. Put authorized person's images in the folder
-3. remove "representations_facenet.pkl file" in database folder
+1. Add authorized image in the database folder and rename the image as the person's name
