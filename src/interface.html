@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Facial Recognition System</title>
     <style>
+
         .button-17 {
             align-items: center;
             appearance: none;
@@ -89,14 +91,13 @@
 </head>
 <h2>Testing Interface</h2>
 <p>Allow camera access request, and wait for few seconds</p>
-<hr />
+<hr/>
 <div id="container">
     <video autoplay playsinline id="videoElement"></video>
     <br>
     <button class="button-17" role="button">Submit</button>
+    <h2 class="result"></h2>
 </div>
-<h2 id="result"></h2>
-
 <script src="jquery-3.6.3.min.js"></script>
 <script>
     var canvas = document.createElement("canvas");
@@ -117,17 +118,23 @@
 
     $(".button-17").click(function () {
         $(this).attr("disabled", true);
-        var text = $("#result");
+        var text = $(this).parent().find(".result");
+        var data_send;
+        var cnt_type;
+
+        text.text("Detecting ...");
         canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
         let image_data_url = canvas.toDataURL('image/jpeg', 1);
-        text.text("Detecting ...");
+        data_send = JSON.stringify({
+            "image": image_data_url
+        });
+        cnt_type = 'application/json;charset=UTF-8';
+
         $.ajax({
             type: "POST",
             url: "http://localhost:5000/recognition",
-            data: JSON.stringify({
-                "image": image_data_url,
-            }),
-            contentType: 'application/json;charset=UTF-8',
+            data: data_send,
+            contentType: cnt_type,
             cache: false,
             success: function (result) {
                 text.text(result);
@@ -136,4 +143,5 @@
         });
     });
 </script>
+
 </html>

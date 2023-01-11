@@ -68,24 +68,7 @@ def base64_to_cv2(image_base64):
     image_cv2 = cv2.imdecode(np_array, cv2.IMREAD_COLOR)
     return image_cv2
 
-# detect person and get name
-def detect_person(input_path):
-	try:
-		pixels = extract_face(input_path)
-		plt.imshow(pixels)
-		plt.axis("off")
-		record_name  = datetime.now().strftime("%m%d%Y%H%M%S")
-		path = os.path.join("record", record_name)
-		plt.savefig(path)
-	except (ValueError): 
-		return "No Face Detected"
-
-	pixels = pixels.astype('float32')
-	samples = expand_dims(pixels, axis=0)
-	samples = preprocess_input(samples, version=2)
-	model = VGGFace(model='resnet50', include_top=False, input_shape=(224, 224, 3), pooling='avg')
-	yhat = model.predict(samples)
-
+def get_result(yhat):
 	cosine_similarity = [cosine(yhat[0],item) for item in database_embedding]
 	database = pd.DataFrame(data = {"name" : names, "cosine" : cosine_similarity})
 	database = database.sort_values(by=['cosine'], ignore_index=True)
@@ -98,13 +81,39 @@ def detect_person(input_path):
 	else:
 		return "No Authorized Personnel detected"
 
+def get_face_embedding(pixels):
+	pixels = pixels.astype('float32')
+	samples = expand_dims(pixels, axis=0)
+	samples = preprocess_input(samples, version=2)
+	model = VGGFace(model='resnet50', include_top=False, input_shape=(224, 224, 3), pooling='avg')
+	yhat = model.predict(samples)
+	return yhat
+
+# detect person and get name
+def detect_person(input_path):
+	try:
+		pixels = extract_face(input_path)
+		plt.imshow(pixels)
+		plt.axis("off")
+		record_name  = datetime.now().strftime("%m%d%Y%H%M%S")
+		path = os.path.join("record", record_name)
+		plt.savefig(path)
+	except (ValueError): 
+		return "No Face Detected"
+
+	yhat = get_face_embedding(pixels)
+	return get_result(yhat)
+
 @app.route("/recognition", methods=['POST'])
 def recognition():
-    if request.method == 'POST': 
-        input_path = 'tmp.jpg'
-        input = base64_to_cv2(request.json["image"])
-        cv2.imwrite(input_path, input)
-        return detect_person(input_path)
+	if request.method == 'POST':
+		input_path = 'tmp.jpg'
+		if 'file' not in request.files:
+			input = base64_to_cv2(request.json["image"])
+			cv2.imwrite(input_path, input)
+		else:
+			request.files["file"].save(input_path)
+		return detect_person(input_path)
 
 names = os.listdir("database")
 database_path = [os.path.join("database", image) for image in names]
