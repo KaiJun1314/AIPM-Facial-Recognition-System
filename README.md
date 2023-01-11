@@ -17,10 +17,6 @@ Project Execution is the execution phase where the result, coding blocks and tec
 ##### Project Closing: [Project Closing](PMP_PLAN/E-PROJECT_CLOSING.md)
 Project Closing indicate the end of the project lifecycle where the project need to document closing document and lesson learnt report.
 
-##### Project Presentation: [Project Presentation](PMP_PLAN/F-PROJECT_PRESENTATION.md)
-Project Presentation shows the demonstration of the car plate recognition system developed by QTMT INC. 
 ## Sample Result
-
-## Project Demonstration
-The video below is the project presentation.
-
+Result using Web API: The Web API developed with this Interface is for Proof of Concept (POC) and does not mean to be used in the real implementation.
+<img src="assets/web_demo.png" width="100%">
