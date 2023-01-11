@@ -2,7 +2,10 @@
 
 ## A. DEFINING THE PROJECT
 ###  Project Summary
-After connecting to the system, a camera installed on the front door of a home can automatically recognise the face of a visitor. The user is able to input their own face via mobile phone. After the user inputs their own face, the system will record it. When the user closes the door, it will lock itself automatically. When a user attempts to unlock a door, a camera will automatically scan his or her face. After a successful match, the door will open automatically. If the matching does not succeed, the doorkeeper will remain locked.
+In ABC Group, there are some room and floor that are prohibited for authorized person only, currently, they using pin password to access these prohibited area. This method is insecure and hard to maintains, because they have to change the password once the password is leak or one of the authorized staff is resigned, and the others have to memorize the new password. Hence, the management decide to upgrade the system with facial recognition features.
+
+In our Facial Recognition System, a webcame and a small display screen will be installed on the side of the door. When the visitor activate the display screen, the system will scan the visitor;s face and compared with the faces of authorized person in database. On success match, the door will open automatically, otherwise, the doorkeeper will remain locked. In maintaining the list of autorized individual, the management can add and remove an authorized person by simply add or remove the individual's image from the database. 
+
 ###  Customer: ABC Group 
 
 ### Project Name: Facial Recognition System
