@@ -1,8 +1,10 @@
 # PROJECT OVERVIEW
 ## D. EXECUTING THE PROJECT
 ### Project Design and Coding
-Flowchart Design:\
-<img src="assets/FlowChart.png" width="60%">
+Flowchart Design:
+<p align="center">
+    <img src="assets/FlowChart.png" width="60%">
+</p>
 
 ### Description of the project coding and implementation
 Libraries and Packages required:
