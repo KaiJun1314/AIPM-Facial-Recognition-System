@@ -3,7 +3,7 @@
 ### Project Design and Coding
 Flowchart Design:
 <p align="center">
-    <img src="assets/FlowChart.png" width="60%">
+    <img src="assets/FlowChart.png" width="50%">
 </p>
 
 ### Description of the project coding and implementation

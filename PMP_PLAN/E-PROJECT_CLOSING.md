@@ -27,11 +27,10 @@ The facial recognition system is done by Group B. it was intended to develop an 
 After the system complete, we got accuracy around 50% from the system tested. 
 
 **3.0 ORIGINAL AND ACTUAL SCHEDULE**
-
-![image](https://user-images.githubusercontent.com/121177884/211190647-b44c0b67-cd55-402a-8258-e92360909440.png)
+s://user-images.githubusercontent.com/94745847/209503930-20a7a2ad-0ed3-4736-8c73-0a307f20f7b1.png)
+![image](https://user-images.githubusercontent.com/94745847/209503968-fc561afa-f2d9-4598-9aed-5b5f652a36d0.png)
 
 **4.0 ORIGINAL AND ACTUAL BUDGET**
-
 ![image](https://user-images.githubusercontent.com/121177884/211195140-cfd018ed-7e12-469b-81ac-beddb8f65d0b.png)
 
 
@@ -43,11 +42,11 @@ The project scope for the facial recognition system was established at the outse
 
 **5.2 OBJECTIVES**
 
-Group B successfully met the objectives that were established at the start of the project. We developed an artificial intelligence-powered system that utilizes deep learning techniques. Deep learning was used to identify patterns on faces and discern facial shapes. Additionally, FAST API was implemented to integrate the Python programs used for facial recognition into an HTML website. This allowed us to achieve their goal of building an API within the system.
+Group B successfully met the objectives that were established at the start of the project. We developed an artificial intelligence-powered system that utilizes deep learning techniques. Deep learning was used to identify patterns on faces and discern facial shapes. Additionally, Flask Web Framework was implemented to integrate the Python programs used for facial recognition into an HTML website. This allowed us to achieve their goal of building an API within the system.
 
 **5.3 IMPACTS**
 
-When this system develop, we can easily recognize people just by usihg their faces. this can avoid from undercovered people or someone who in planning to pretending like other person. this system can be use as example in employee clock in the job time which is we cant ask for someone to clock in for us.
+When this system develop, we can easily identify people just by using their faces. this can avoid from undercovered people or someone who in planning to pretending like other person. this system can be use as example in employee clock in the job time which is we cant ask for someone to clock in for us.
 
 **6.0 TRANSITION PLAN**
 
