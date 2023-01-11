@@ -39,8 +39,8 @@ Two intelligence system are used in this project which include :
 
 ### Milestone Chart
 #### Microsoft Project:
-
-![image](https://user-images.githubusercontent.com/121177884/211190647-b44c0b67-cd55-402a-8258-e92360909440.png)
+![image](https://user-images.githubusercontent.com/94745847/209503930-20a7a2ad-0ed3-4736-8c73-0a307f20f7b1.png)
+![image](https://user-images.githubusercontent.com/94745847/209503968-fc561afa-f2d9-4598-9aed-5b5f652a36d0.png)
 
 
 <br><br>

@@ -14,12 +14,10 @@ The system WBS for the Facial Recognition system are represented as follows. Thi
 ![image](https://user-images.githubusercontent.com/94745847/209532663-dd9620a4-6afe-4c26-a6f9-3a60397dff79.png)
 
 
-
-
 ### Scope
 A work breakdown structure (WBS) is designed to map all relevant tasks and to develop the maintenance and approval process for the WBS.
 
-The scope of this Facial Recognition System project must be determined. A face recognition system is expected to automatically identify faces in images and videos. It can function in either of two modes: (1) face verification (or authentication), and (2) face identification (or recognition).
+The scope of this Facial Recognition System project must be determined. A face recognition system is expected to automatically identify faces in images and videos. It can function in either of two modes: (1) face recognition (or detection), and (2) face identification (or authentication).
 
 ### Risk Identification Chart (Quality, Cost, Time)
 
