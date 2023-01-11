@@ -10,8 +10,10 @@
 </p>
 
 #### 2. Lessons Learned Document
+<p align="center">
+    <img src="assets/lesson_learned.png" width="80%">
+</p>
 
-![image](https://user-images.githubusercontent.com/121177884/211194866-ec238c66-fa46-4c8d-8b23-7c3c39f7c7dd.png)
 
 
 #### 3. Final Project Report
