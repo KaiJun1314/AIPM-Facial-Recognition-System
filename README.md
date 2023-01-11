@@ -19,4 +19,4 @@ Project Closing indicate the end of the project lifecycle where the project need
 
 ## Sample Result
 Result using Web API: The Web API developed with this Interface is for Proof of Concept (POC) and does not mean to be used in the real implementation.
-<img src="assets/web_demo.png" width="100%">
+<img src="PMP_Plan/assets/web_demo.png" width="100%">

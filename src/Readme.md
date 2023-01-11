@@ -11,7 +11,7 @@ $ conda create --name facial-recog python=3.10.3
 $ pip install -r requirements.txt
 ```
 
-# Command to run
+# Command to run the server
 ```
 $ conda activate facial-recog
 $ python app.py
@@ -25,7 +25,11 @@ $ python app.py
 
 ## API
 1. Run the server
-2. Send your image data using POST Method to http://localhost:5000/recognition
+2. Send your image data or image file using POST Method to http://localhost:5000/recognition
+3. The return message will be : 
+    * No Face Detected : No Human Face is detected
+    * Welcome {person_name} : Authenticated Successfully
+    * No Authorized Personnel detected : The individual in not authorized
 
-## Add New Authorized Person
-1. Add authorized image in the database folder and rename the image as the person's name
+## Adding New Authorized Person
+1. Add authorized individual image in the database folder and rename the image as the individual's name
