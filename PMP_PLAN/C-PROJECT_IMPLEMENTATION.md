@@ -1,6 +1,6 @@
 # PROJECT OVERVIEW
 
-## C. IMPLEMENTING THE PROJECT PLAN
+## C. IMPLEMENTING THE PROJECT PLANNING
 ### Deliverables:
 #### Hardware Requirement:
 Laptop which consists of intel core i5 8th Gen and 12GB RAM is used to conduct the project.
