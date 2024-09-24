@@ -1,15 +1,18 @@
-from flask import Flask, request
 import base64
 import cv2
 import numpy as np
+
+from flask import Flask, request
 from flask_cors import CORS
 from PIL import Image
 from numpy import asarray, expand_dims
 from scipy.spatial.distance import cosine
+
 from mtcnn.mtcnn import MTCNN
 from keras_vggface.vggface import VGGFace
 from keras_vggface.utils import preprocess_input
 from datetime import datetime
+
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pylab as plt
@@ -22,42 +25,31 @@ app = Flask(__name__)
 CORS(app)
 
 def extract_face(filename, required_size=(224, 224)):
-	# load image from file
+
 	pixels = plt.imread(filename)
-	# create the detector, using default weights
 	detector = MTCNN()
 	try: 
-		# detect faces in the image
 		results = detector.detect_faces(pixels)
-		# extract the bounding box from the first face
 		x1, y1, width, height = results[0]['box']
 	except:
 		raise ValueError("No Face Detected")
 	
 	x2, y2 = x1 + width, y1 + height
-	# extract the face
 	face = pixels[y1:y2, x1:x2]
-	# resize pixels to the model size
 	image = Image.fromarray(face)
 	image = image.resize(required_size)
 	face_array = asarray(image)
 	return face_array
 
-# extract faces and calculate face embeddings for a list of photo files
+
 def get_embeddings(filenames):
-	# extract faces
 	faces = [extract_face(f) for f in filenames]
-	# convert into an array of samples
 	samples = asarray(faces, 'float32')
-	# prepare the face for the model, e.g. center pixels
 	samples = preprocess_input(samples, version=2)
-	# create a vggface model
 	model = VGGFace(model='resnet50', include_top=False, input_shape=(224, 224, 3), pooling='avg')
-	# perform prediction
 	yhat = model.predict(samples)
 	return yhat
 
-# convert base64 image data to cv2
 def base64_to_cv2(image_base64):
     """base64 image to cv2"""
     idx = image_base64.find('base64,')
@@ -106,14 +98,13 @@ def detect_person(input_path):
 
 @app.route("/recognition", methods=['POST'])
 def recognition():
-	if request.method == 'POST':
-		input_path = 'tmp.jpg'
-		if 'file' not in request.files:
-			input = base64_to_cv2(request.json["image"])
-			cv2.imwrite(input_path, input)
-		else:
-			request.files["file"].save(input_path)
-		return detect_person(input_path)
+	input_path = 'tmp.jpg'
+	if 'file' not in request.files:
+		input = base64_to_cv2(request.json["image"])
+		cv2.imwrite(input_path, input)
+	else:
+		request.files["file"].save(input_path)
+	return detect_person(input_path)
 
 names = os.listdir("database")
 database_path = [os.path.join("database", image) for image in names]
